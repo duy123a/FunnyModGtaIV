@@ -14,6 +14,8 @@ namespace TestScriptCS.Scripts
 
 		private bool isWhoring;
 
+		private bool isSmoking = false;
+
 		private int payment;
 
 		private Vector3 myLocation;
@@ -33,10 +35,41 @@ namespace TestScriptCS.Scripts
 
 				this.Player.Character.Voice = "F_Y_HOOKER_03_BH2";
 
+				if ((Game.isKeyPressed(Keys.F7)
+						|| Game.isGameKeyPressed(GTA.GameKey.RadarZoom))
+					&& (this.Player.Character.isInWater == false)
+					&& (this.Player.Character.isInCombat == false)
+					&& (isSmoking == false))
+				{
+					isSmoking = true;
+					this.Player.Money -= 2;
+					if (this.Player.Character.isSittingInVehicle() == false)
+					{
+						Game.DisplayText("It is cold outside, I should find a client soon... ");
+						this.Player.Character.Animation.Play(new AnimationSet("missray1"), "stand_smoke", 5f);
+					}
+					else
+					{
+						if (myVehicle.Model.isCar)
+						{
+							Game.DisplayText("I hope someone can abuse me... ");
+							this.Player.Character.Animation.Play(new AnimationSet("missfaustin8"), "carsmoke_passenger", 5f);
+						}
+						else if (myVehicle.Model.isBike)
+						{
+							Game.DisplayText("Maybe I should work in the brothel instead... ");
+							this.Player.Character.Animation.Play(new AnimationSet("missroman10"), "smoke_sports_bike", 5f);
+						}
+					}
+					this.Wait(12000);
+					this.Player.Character.Health += 10;
+					isSmoking = false;
+				}
+
 				if ((Game.isKeyPressed(Keys.F1)
-						|| (Game.isGameKeyPressed(GTA.GameKey.Sprint)
-						&& Game.isGameKeyPressed(GTA.GameKey.RadarZoom)))
-					&& initial == 1)
+					|| (Game.isGameKeyPressed(GTA.GameKey.Sprint)
+					&& Game.isGameKeyPressed(GTA.GameKey.RadarZoom)))
+				&& initial == 1)
 				{
 					if (this.Player.Character.isInCombat == false && this.Player.Character.isInWater == false)
 					{

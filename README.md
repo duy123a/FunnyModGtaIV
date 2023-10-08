@@ -29,3 +29,5 @@ The script was developed and tested on a patch 1.0.7.0 with installed .Net Scrip
 You will have sex on the car running, or I can make it stop but no way I can make it like the driver drives you to the secluded area and have sex, it is beyond my ability right now (and maybe in the future too, unless someone can help me about it).
 
 If you are using ped skins and go to cutscene, you will get crash. It is caused by Rock \* and I can't fix about it. You need to change it back Niko skin or using special skins which completely replace Niko. If you plan to using the special skins, you can use the "ProstituteMod_EX.cs" file instead (no need to press F7 to start).
+
+Also the EX version support smoking feature (using F7 key).
