@@ -1,4 +1,4 @@
-# Prostitute Mod for Gta IV
+# Funny Mod for Gta IV
 
 Since no one made it properly, I decided to make it myself
 
@@ -6,7 +6,7 @@ A lot of ideas from this [mod](https://libertycity.net/files/gta-4/71666-prostit
 
 ## How to use
 
-Put "ProstituteModGtaIV\TestScriptCS\Scripts\ProstituteMod.cs" to your script in the GTA IV game folder, require .NET script hook GTA IV.
+Put "FunnyModGtaIV\TestScriptCS\Scripts\ProstituteMod.cs" to your script in the GTA IV game folder, require .NET script hook GTA IV.
 
 The script is activated by pressing the **F7 (or T) key** for the keyboard or the **"Down Arrow"** key for the controller, after which the model of the main character (Niko) is replaced with a cute girl (if you installed my componentpeds.img) or a randomly generated priestess of love.
 
